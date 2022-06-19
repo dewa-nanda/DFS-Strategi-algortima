@@ -11,13 +11,22 @@ class Graph {
 	void DFSUtil(int v);
 
 public:
+	Graph();
 	map<int, bool> visited;
 	map<int, list<int> > adj;
-	// function to add an edge to graph
+	// fungsi menambahkan garis ke graph
 	void addEdge(int v, int w);
-	// prints DFS traversal of the complete graph
+	// outputkan DFS 
 	void DFS();
 };
+
+	Graph::Graph(){
+		cout << "Strategi Algoritma - Tugas"<<endl;
+		cout << "Nama	: Dewa Putra Hernanda" <<endl;
+		cout << "Kelas	: H" <<endl;
+		cout << "Nim	: 2000018270" <<endl;
+		cout << "=================================" <<endl <<endl;
+	}
 
 void Graph::addEdge(int v, int w)
 {
@@ -48,22 +57,19 @@ void Graph::DFS()
 			DFSUtil(i.first);
 }
 
-// Driver Code
 int main()
 {
-	// Create a graph given in the above diagram
-	Graph g;
-	g.addEdge(1, 2);
-    g.addEdge(2, 4);
-    g.addEdge(2, 5);
-    g.addEdge(4, 8);
-    g.addEdge(5, 8);
-    g.addEdge(6, 3);
-    g.addEdge(7, 3); 
-	
+	Graph graph;
+	graph.addEdge(1, 2);
+    graph.addEdge(2, 4);
+    graph.addEdge(2, 5);
+    graph.addEdge(4, 8);
+    graph.addEdge(5, 8);
+    graph.addEdge(6, 3);
+    graph.addEdge(7, 3); 
 
 	cout << "Urutan simpul2 yang dikunjungi: \n";
-	g.DFS();
+	graph.DFS();
 
 	return 0;
 }
