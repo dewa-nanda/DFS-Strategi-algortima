@@ -1,6 +1,9 @@
 // C++ program to print DFS from geek for geeks 
 
-#include <bits/stdc++.h>
+#include <iostream>
+#include <map>
+#include <list>
+
 using namespace std;
 
 class Graph {
